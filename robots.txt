@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sans100-beep.github.io/campuskit-guide/sitemap.xml
