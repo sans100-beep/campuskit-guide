@@ -1,47 +1,10 @@
 const affiliateLink = 'https://amzn.to/4zewrjd';
 const productImage = 'https://data.kleintools.com/sites/all/product_assets/hires/klein/mm450_photo_c.jpg';
-
 const categories = [
   { icon: '🎓', title: 'Student Essentials', text: 'Study gear, dorm basics and everyday tools that make campus life easier.' },
   { icon: '⚡', title: 'Electrical Engineering', text: 'Practical instruments and accessories for labs, projects and learning.' },
   { icon: '🔧', title: 'Engineering Accessories', text: 'Useful gear for building, measuring, organizing and working on projects.' },
   { icon: '💄', title: 'Beauty & Personal Care', text: 'Everyday personal-care picks selected for convenience and value.' },
 ];
-
-const products = [
-  { name: 'Klein Tools MM450 Auto-Ranging Multimeter', category: 'Electrical Engineering', description: 'TRMS auto-ranging multimeter for labs, troubleshooting and student projects.', image: productImage, link: affiliateLink, features: ['TRMS auto-ranging', '600V AC/DC', '10A AC/DC', 'CAT III 600V'] },
-];
-
-export default function Home() {
-  return (
-    <main>
-      <nav className="nav container">
-        <a className="brand" href="#top"><span className="brand-mark">C</span> CampusKit<span className="brand-light">Guide</span></a>
-        <div className="nav-links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a></div>
-      </nav>
-
-      <div id="top" className="container">
-        <header className="hero">
-          <div className="eyebrow">Student-tested • Practical picks</div>
-          <h1>Useful products.<br /><span>Less searching.</span></h1>
-          <p className="hero-copy">CampusKit Guide helps students find practical products for college, engineering projects, study setups and everyday life — without endless scrolling.</p>
-          <div className="hero-actions"><a className="primary-button" href="#categories">Explore categories <span>↓</span></a><a className="text-button" href="#products">See our product picks →</a></div>
-        </header>
-
-        <section id="categories" className="section">
-          <div className="section-heading"><div><div className="eyebrow">Browse by need</div><h2>Start with what you need.</h2></div><span className="section-note">More categories coming soon</span></div>
-          <div className="categories">{categories.map((category, index) => <a className="category-card" href="#products" key={category.title}><div className="category-top"><span className="category-icon">{category.icon}</span><span className="category-number">0{index + 1}</span></div><h3>{category.title}</h3><p>{category.text}</p><span className="arrow">Explore →</span></a>)}</div>
-        </section>
-
-        <section id="products" className="section">
-          <div className="section-heading"><div><div className="eyebrow">Our product picks</div><h2>Featured tools & gear.</h2></div><span className="section-note">Currently 1 product • More coming</span></div>
-          <div className="product-grid">{products.map(product => <article className="product-card" key={product.name}><div className="product-image-wrap"><img src={product.image} alt={product.name} className="product-image" /><span className="product-label">{product.category}</span></div><div className="product-card-body"><h3>{product.name}</h3><p>{product.description}</p><div className="product-features">{product.features.map(feature => <span key={feature}>✓ {feature}</span>)}</div><a className="primary-button" href={product.link} target="_blank" rel="nofollow sponsored noopener">View on Amazon <span>↗</span></a></div></article>)}</div>
-        </section>
-
-        <section id="about" className="why-section"><div><div className="eyebrow">Why CampusKit?</div><h2>We focus on useful, not just popular.</h2></div><div className="why-grid"><div><strong>01</strong><h3>Practical</h3><p>Products are presented around real student and project needs.</p></div><div><strong>02</strong><h3>Simple</h3><p>Clear recommendations without overwhelming you with endless choices.</p></div><div><strong>03</strong><h3>Growing</h3><p>New categories and product guides will be added as CampusKit grows.</p></div></div></section>
-
-        <footer className="footer"><div><a className="brand" href="#top"><span className="brand-mark">C</span> CampusKit<span className="brand-light">Guide</span></a><p>Practical picks for campus life.</p></div><div className="footer-links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="#about">About</a></div><p className="disclosure">As an Amazon Associate, CampusKit Guide earns from qualifying purchases.</p></footer>
-      </div>
-    </main>
-  );
-}
+const products = [{ name: 'Klein Tools MM450 Auto-Ranging Multimeter', category: 'Electrical Engineering', description: 'TRMS auto-ranging multimeter for labs, troubleshooting and student projects.', image: productImage, link: affiliateLink, features: ['TRMS auto-ranging', '600V AC/DC', '10A AC/DC', 'CAT III 600V'] }];
+export default function Home() { return <main><nav className="nav container"><a className="brand" href="#top"><span className="brand-mark">C</span> CampusKit<span className="brand-light">Guide</span></a><div className="nav-links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="/guides">Guides</a><a href="#about">About</a></div></nav><div id="top" className="container"><header className="hero"><div className="eyebrow">Student-tested • Practical picks</div><h1>Useful products.<br /><span>Less searching.</span></h1><p className="hero-copy">CampusKit Guide helps students find practical products for college, engineering projects, study setups and everyday life — without endless scrolling.</p><div className="hero-actions"><a className="primary-button" href="#categories">Explore categories <span>↓</span></a><a className="text-button" href="/guides">Read our buying guides →</a></div></header><section id="categories" className="section"><div className="section-heading"><div><div className="eyebrow">Browse by need</div><h2>Start with what you need.</h2></div><span className="section-note">More categories coming soon</span></div><div className="categories">{categories.map((category,index)=><a className="category-card" href="#products" key={category.title}><div className="category-top"><span className="category-icon">{category.icon}</span><span className="category-number">0{index+1}</span></div><h3>{category.title}</h3><p>{category.text}</p><span className="arrow">Explore →</span></a>)}</div></section><section id="products" className="section"><div className="section-heading"><div><div className="eyebrow">Our product picks</div><h2>Featured tools & gear.</h2></div><span className="section-note">Currently 1 product • More coming</span></div><div className="product-grid">{products.map(product=><article className="product-card" key={product.name}><div className="product-image-wrap"><img src={product.image} alt={product.name} className="product-image" /><span className="product-label">{product.category}</span></div><div className="product-card-body"><h3>{product.name}</h3><p>{product.description}</p><div className="product-features">{product.features.map(feature=><span key={feature}>✓ {feature}</span>)}</div><a className="primary-button" href={product.link} target="_blank" rel="nofollow sponsored noopener">View on Amazon <span>↗</span></a></div></article>)}</div></section><section className="guide-callout"><div><div className="eyebrow">Before you buy</div><h2>Not sure what you actually need?</h2><p>Our guides explain the important features, trade-offs and buying considerations in plain language.</p></div><a className="primary-button" href="/guides">Explore CampusKit Guides →</a></section><section id="about" className="why-section"><div><div className="eyebrow">Why CampusKit?</div><h2>We focus on useful, not just popular.</h2></div><div className="why-grid"><div><strong>01</strong><h3>Practical</h3><p>Products are presented around real student and project needs.</p></div><div><strong>02</strong><h3>Simple</h3><p>Clear recommendations without overwhelming you with endless choices.</p></div><div><strong>03</strong><h3>Growing</h3><p>New categories, guides and product comparisons will be added as CampusKit grows.</p></div></div></section><footer className="footer"><div><a className="brand" href="#top"><span className="brand-mark">C</span> CampusKit<span className="brand-light">Guide</span></a><p>Practical picks for campus life.</p></div><div className="footer-links"><a href="#categories">Categories</a><a href="#products">Products</a><a href="/guides">Guides</a><a href="#about">About</a></div><p className="disclosure">As an Amazon Associate, CampusKit Guide earns from qualifying purchases.</p></footer></div></main> }
