@@ -1,8 +1,8 @@
 import TrackedAmazonLink from './components/TrackedAmazonLink';
 
 const productImage = 'https://data.kleintools.com/sites/all/product_assets/hires/klein/mm450_photo_c.jpg';
-const laptopStandImage = 'https://allsop.com/cdn/shop/files/32147_Metal_Art_Adjustable_Laptop_Stand_3Q.jpg';
-const headphonesImage = 'https://www.skullcandy.com/cdn/shop/files/Crusher540Active_Smoke_1.jpg';
+const laptopStandImage = 'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6409/6409988cv17d.jpg%3BmaxHeight%3D1920%3BmaxWidth%3D900?format=webp';
+const headphonesImage = 'https://cdn.ozone.bg/media/catalog/product/b/e/bezzhichni_slushalki_skullcandy_crusher_540_active_coal_cherni_1751529427_0.jpg';
 const categories = [
   { icon: '🎓', title: 'Student Essentials', text: 'Study gear, dorm basics and everyday tools that make campus life easier.' },
   { icon: '⚡', title: 'Electrical Engineering', text: 'Practical instruments and accessories for labs, projects and learning.' },
