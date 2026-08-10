@@ -2,8 +2,7 @@
 
 import { track } from '@vercel/analytics';
 
-export default function TrackedAmazonLink({ product, placement = 'unknown', className = 'primary-button' }: { product: string; placement?: string; className?: string }) {
-  const href = 'https://amzn.to/4zewrjd';
+export default function TrackedAmazonLink({ product, placement = 'unknown', className = 'primary-button', href = 'https://amzn.to/4zewrjd' }: { product: string; placement?: string; className?: string; href?: string }) {
   const handleClick = () => {
     track('amazon_outbound_click', { product, placement });
   };
